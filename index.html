@@ -2,14 +2,26 @@
 <html lang="en">
 
 <head>
+  <!-- required meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- primary meta tags -->
+  <title>Home - Burger House</title>
+
+  <!-- fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 
 <body>
@@ -49,47 +61,49 @@
   <section id="trending">
     <div class="wrap">
       <div class="row">
-        <a class="burger trending" href="#">
+        <a class="burger trending" href="#" data-aos="fade-up">
           <img src="assets/img/group2_img_1.jpg" alt="Most Popular Burger">
           <p class="title"><span>Try it today</span>Most Popular Burger</p>
         </a>
         <div class="row-burgers">
-          <a class="burger" href="#">
+          <a class="burger" href="#" data-aos="fade-up">
             <img src="assets/img/group2_img_2.jpg" alt="More Taste Burgers">
             <p class="title"><span>Try it today</span>More Fun<br>More Taste</p>
           </a>
-          <a class="burger" href="#">
+          <a class="burger" href="#" data-aos="fade-up">
             <img src="assets/img/group2_img_3.jpg" alt="Fresh & Chili Burgers">
             <p class="title"><span>Try it today</span>Fresh & Chili</p>
           </a>
         </div>
       </div>
-      <a class="btn" href="#">Always tasty burger</a>
+      <div data-aos="fade-up">
+        <a class="btn" href="#">Always tasty burger</a>
+      </div>
     </div>
   </section>
   <section id="selections">
-    <div class="desc">
+    <div class="desc" data-aos="fade-up">
       <h2>Choose & Enjoy</h2>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos exercitationem illo quaerat minus eaque deleniti
         ex omnis maxime, iusto officia deserunt, aliquam recusandae nulla ut quam nobis debitis dignissimos distinctio?
       </p>
     </div>
-    <div class="wrap-selections">
-      <div class="burger">
+    <div class="wrap-selections" data-aos="fade-up">
+      <div class="burger" data-aos="fade-up">
         <img src="assets/img/group3_burger_1.png" alt="Lorem, ipsum dolor.">
         <h3>Lorem, ipsum dolor.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem earum beatae quod optio, dicta incidunt.
         </p>
         <a href="#" class="btn">Order Now</a>
       </div>
-      <div class="burger">
+      <div class="burger" data-aos="fade-up">
         <img src="assets/img/group3_burger_2.png" alt="Lorem, ipsum dolor.">
         <h3>Lorem, ipsum dolor.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem earum beatae quod optio, dicta incidunt.
         </p>
         <a href="#" class="btn">Order Now</a>
       </div>
-      <div class="burger">
+      <div class="burger" data-aos="fade-up">
         <img src="assets/img/group3_burger_1.png" alt="Lorem, ipsum dolor.">
         <h3>Lorem, ipsum dolor.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem earum beatae quod optio, dicta incidunt.
@@ -99,7 +113,7 @@
     </div>
   </section>
   <section id="slider">
-    <div class="card wrap">
+    <div class="card wrap" data-aos="fade-up">
       <div class="card-content">
         <div class="card-title"><span>Discover</span><br>Upcoming events</div>
         <p>
@@ -115,23 +129,23 @@
     </div>
   </section>
   <section id="contact">
-    <div class="desc">
+    <div class="desc" data-aos="fade-up">
       <h4>Reservation</h5>
         <h2>Book your table</h2>
     </div>
-    <div class="wrap-solid">
+    <div class="wrap-solid" data-aos="fade-up">
       <form action="" method="POST">
         <div class="inputs-container">
-          <input type="text" name="name" placeholder="Name">
-          <input type="email" name="email" placeholder="Email">
+          <input type="text" name="name" placeholder="Name" data-aos="fade-up">
+          <input type="email" name="email" placeholder="Email" data-aos="fade-up">
         </div>
         <div class="inputs-container">
-          <input type="date" name="date" placeholder="Date">
-          <input type="time" name="time" placeholder="Time">
+          <input type="date" name="date" placeholder="Date" data-aos="fade-up">
+          <input type="time" name="time" placeholder="Time" data-aos="fade-up">
         </div>
         <div class="inputs-container">
-          <input type="number" name="people" placeholder="People">
-          <input type="button" name="submit" value="Find a table">
+          <input type="number" name="people" placeholder="People" data-aos="fade-up">
+          <input type="submit" name="submit" value="Find a table" data-aos="fade-up">
         </div>
       </form>
     </div>
@@ -164,6 +178,7 @@
       </div>
     </div>
   </footer>
+  <script>AOS.init();</script>
 </body>
 
 </html>

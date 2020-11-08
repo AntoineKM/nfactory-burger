@@ -205,7 +205,7 @@ i.icon.social-wa {
 /* header */
 
 #header {
-    /*background: var(--orange);*/
+    background-color: var(--orange);
     background-image: url('../img/header-background.png');
     background-size: cover;
     padding: 50px 0;
@@ -580,7 +580,7 @@ i.icon.social-wa {
     border: solid rgba(0, 0, 0, .5) 1px;
 }
 
-#contact .inputs-container input[type="button"] {
+#contact .inputs-container input[type="submit"] {
     background-color: var(--red);
     color: var(--white);
     border: 0;
@@ -589,7 +589,7 @@ i.icon.social-wa {
     transition: all .2s;
 }
 
-#contact .inputs-container input[type="button"]:hover {
+#contact .inputs-container input[type="submit"]:hover {
     background-color: var(--brown);
     color: var(--white)
 }
@@ -752,6 +752,10 @@ i.icon.social-wa {
     }
     #selections .wrap-selections .burger {
         margin-bottom: 50px;
+    }
+    /* slider */
+    #slider .card {
+        flex-direction: column-reverse;
     }
     /* contact */
     #contact .inputs-container {
