@@ -65,7 +65,7 @@ table {
     --white: #fff;
     --black: #000;
     --brown: #3d2514;
-    --orange: #ffc045;
+    --orange:#ffc74d;
     --beige: #fee8bb;
     --red: #bf2222;
     --gray: #3d3d3d;
@@ -205,7 +205,9 @@ i.icon.social-wa {
 /* header */
 
 #header {
-    background: var(--orange);
+    /*background: var(--orange);*/
+    background-image: url('../img/header-background.png');
+    background-size: cover;
     padding: 50px 0;
     min-height: 820px;
     display: flex;
