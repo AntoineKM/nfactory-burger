@@ -132,6 +132,7 @@ a {
     padding: 10px 20px;
     text-transform: uppercase;
     transition: all .2s;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -206,8 +207,7 @@ i.icon.social-wa {
 #header {
     background: var(--orange);
     padding: 50px 0;
-    min-height: 100vh;
-    height: 820px;
+    min-height: 820px;
     display: flex;
     flex-direction: column;
     color: var(--brown);
@@ -218,7 +218,11 @@ i.icon.social-wa {
 #header .nav {
     z-index: 5;
     display: flex;
-    height: 80px;
+    min-height: 80px;
+}
+
+#header .nav .nav-logo {
+    flex: 1;
 }
 
 #header .nav .nav-logo img {
@@ -232,6 +236,7 @@ i.icon.social-wa {
     align-items: flex-end;
     justify-content: space-between;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #header .nav .nav-container a {
@@ -252,6 +257,8 @@ i.icon.social-wa {
 #header .nav .nav-container .navbar {
     display: flex;
     margin-right: -15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #header .nav .nav-container .navbar a:after {
@@ -275,11 +282,12 @@ i.icon.social-wa {
     border-radius: 25px;
 }
 
-#header .nav .nav-container li {
+#header .nav .nav-container .navbar li {
     padding: 0 15px;
     font-family: 'Bebas Neue', cursive;
     font-size: 1.3rem;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 /* header > featured */
@@ -303,19 +311,20 @@ i.icon.social-wa {
     border-image-slice: 2;
     border-image-repeat: round;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 #header .featured .featured-text .featured-text-line2 {
     margin: 10px 0;
-    font-size: 6rem;
+    font-size: 6.5vw;
+    ;
     text-transform: uppercase;
     text-shadow: 3px 3px var(--white);
     font-family: 'Alfa Slab One', cursive;
 }
 
 #header .featured .featured-text .featured-text-line3 {
-    font-size: 3rem;
+    font-size: 4vw;
     text-transform: uppercase;
     text-shadow: 3px 3px var(--white);
     font-family: 'Alfa Slab One', cursive;
@@ -456,6 +465,8 @@ i.icon.social-wa {
     justify-content: center;
     padding: 20px 0;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 1600px;
 }
 
 #selections .desc p {
@@ -486,7 +497,7 @@ i.icon.social-wa {
 }
 
 #selections .wrap-selections .burger p {
-    margin: 25px 75px 50px;
+    margin: 25px 50px 50px;
 }
 
 #selections .wrap-selections .burger .btn {
@@ -557,6 +568,7 @@ i.icon.social-wa {
 #contact .inputs-container input {
     flex: 1;
     max-width: 48%;
+    width: 100%;
     margin: 10px 0;
     padding: 15px;
     font-family: 'Bebas Neue', cursive;
@@ -654,4 +666,125 @@ i.icon.social-wa {
 
 #footer .footer-container .footer-col.footer-info .socials .icon:hover {
     transform: translatey(-2px);
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1220px) {
+    .wrap-fluid {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .wrap {
+        padding: 0 10px;
+    }
+    #header .featured .featured-burger img {
+        margin-top: -25px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .wrap-solid {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    /* header */
+    #header .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    #header .nav .nav-container {
+        align-items: center;
+        margin-top: 10px;
+    }
+    #header .nav .nav-container .navbar {
+        margin-top: 15px;
+    }
+    #header .nav .nav-container .navbar li {
+        font-size: 1rem;
+    }
+    #header .featured .featured-text .featured-text-line1 {
+        font-size: 4vw;
+    }
+    #header .featured .featured-text .featured-text-line2 {
+        font-size: 12vw;
+    }
+    #header .featured .featured-text .featured-text-line3 {
+        font-size: 8vw;
+    }
+    #header .featured {
+        flex-direction: column;
+    }
+    #header .featured .featured-text {
+        margin-top: 25px;
+        text-align: center;
+    }
+    #header .featured .featured-burger .featured-price-wrapper {
+        bottom: 50px;
+        left: 25px;
+        height: 125px;
+        width: 125px;
+    }
+    /* trending */
+    #trending .row {
+        flex-direction: column;
+    }
+    #trending .burger.trending {
+        margin-right: 0;
+    }
+    #trending .row .burger {
+        margin-bottom: 15px;
+    }
+    #trending .btn {
+        margin-top: 30px;
+    }
+    /* selections */
+    #selections .wrap-selections {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 75px 0 0;
+    }
+    #selections .wrap-selections .burger {
+        margin-bottom: 50px;
+    }
+    /* contact */
+    #contact .inputs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact .inputs-container input {
+        max-width: 80%;
+    }
+    /* footer */
+    #footer {
+        margin-bottom: 0;
+    }
+    #footer .footer-container {
+        position: relative;
+        flex-direction: column;
+    }
+    #footer .footer-container .footer-col {
+        position: static;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #footer .footer-container .footer-col .copyright {
+        bottom: 10px;
+    }
+    #footer .footer-container .footer-col.footer-info .socials {
+        bottom: 10px;
+        right: 25px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #footer .footer-container .footer-col.footer-info .socials {
+        top: 25px;
+        right: 25px;
+    }
 }
