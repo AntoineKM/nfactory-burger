@@ -560,6 +560,10 @@ i.icon.social-wa {
     position: relative;
 }
 
+#trending .row .burger:hover {
+    transform: scale(1.03);
+}
+
 #trending .row .burger img {
     border-radius: 10px;
     max-width: 100%;
